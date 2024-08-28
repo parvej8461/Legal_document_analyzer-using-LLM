@@ -1,0 +1,8 @@
+mlflow
+pandas
+transformers 
+nltk 
+streamlit 
+scikit-learn 
+spacy
+python -m spacy download en_core_web_sm

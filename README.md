@@ -1,54 +1,125 @@
-#Legal Document Analyzer
-The Legal Document Analyzer is an intelligent tool that helps users process and analyze legal documents. It leverages natural language processing (NLP) techniques to summarize, extract key points, flag potential issues, and identify definitions within legal documents. Additionally, the tool uses MLflow to track and log various metrics and results, enabling experiment tracking and reproducibility.
+---
 
-#Features
-Summarization: Automatically summarizes lengthy legal documents into concise summaries.
-Key Point Extraction: Extracts crucial information such as parties involved, key dates, obligations, and more.
-Issue Detection: Identifies potential problems like vague language, inconsistencies, missing sections, contradictions, and insufficient party identification.
-Definition Extraction: Detects and extracts definitions from legal documents.
-MLflow Integration: Logs key metrics, parameters, and artifacts (like summaries) for tracking experiments.
-Technologies Used
-MLflow: For experiment tracking and logging.
-Hugging Face Transformers: Used for summarization (facebook/bart-large-cnn) and question answering (deepset/roberta-base-squad2).
-SpaCy: For Named Entity Recognition (NER).
-Scikit-learn: For TF-IDF vectorization and cosine similarity computation.
-Streamlit: Provides an intuitive web UI for users to upload and analyze legal documents.
-Regex: For extracting definitions.
-NLTK: Used for sentence tokenization.
-Installation
-To set up the Legal Document Analyzer, follow these steps:
+#  Legal Document Analyzer
 
-Clone the repository:
+The **Legal Document Analyzer** is an intelligent NLP-powered tool designed to process and analyze legal documents efficiently. It uses natural language processing techniques to **summarize**, **extract key points**, **identify definitions**, and **flag potential issues** in legal content. With **MLflow** integration, all analyses are logged for reproducibility and experiment tracking.
 
+---
 
+##  Features
+
+- **Summarization**  
+  Automatically generates concise summaries of lengthy legal documents.
+
+- **Key Point Extraction**  
+  Identifies and highlights critical elements such as parties, key dates, obligations, etc.
+
+- **Issue Detection**  
+  Flags ambiguous language, contradictions, missing sections, and insufficient details.
+
+- **Definition Extraction**  
+  Automatically extracts and organizes definitions found within the document.
+
+- **MLflow Integration**  
+  Tracks and logs metrics, summaries, and parameters to ensure reproducibility and experiment management.
+
+---
+
+##  Technologies Used
+
+- **MLflow** – Experiment tracking and artifact logging  
+- **Hugging Face Transformers**  
+  - `facebook/bart-large-cnn` for summarization  
+  - `deepset/roberta-base-squad2` for question answering  
+- **SpaCy** – Named Entity Recognition (NER)  
+- **Scikit-learn** – TF-IDF and cosine similarity  
+- **Streamlit** – Web UI for document uploads and analysis  
+- **Regex** – Legal definition pattern recognition  
+- **NLTK** – Sentence tokenization  
+
+---
+
+##  Installation
+
+Follow these steps to set up the Legal Document Analyzer:
+
+1. **Clone the repository:**
+
+```bash
 git clone https://github.com/your-username/legal-document-analyzer.git
 cd legal-document-analyzer
-Install dependencies:
+```
 
+2. **Install dependencies:**
 
+```bash
 pip install -r requirements.txt
-Run the application:
+```
 
+3. **Run the application:**
+
+```bash
 streamlit run app.py
-(Optional) Set up MLflow tracking:
+```
 
+4. *(Optional)* **Start the MLflow UI:**
 
+```bash
 mlflow ui
-Usage
-Upload a Legal Document: Once the application is running, upload a legal document (in .txt format) using the file uploader.
-View Results: The app will automatically process the document and display the following:
-Summary: A concise summary of the document.
-Key Points: Extracted key points related to the legal content.
-Potential Issues: Detected potential issues such as vague language, missing sections, and contradictions.
-Definitions: Extracted legal definitions found in the document.
-Track Results with MLflow: The app logs the document analysis results as an MLflow experiment. You can view parameters, metrics, and artifacts (e.g., summary) in the MLflow UI.
+```
 
+---
 
-#Contributing
-Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+##  Usage
 
-Fork the repository.
-Create a new branch (git checkout -b feature/your-feature).
-Commit your changes (git commit -am 'Add some feature').
-Push to the branch (git push origin feature/your-feature).
-Open a pull request.
+1. **Upload a Legal Document**  
+   Use the Streamlit interface to upload a `.txt` legal document.
+
+2. **View Results**  
+   Once processed, the app will display:
+   - 🔹 **Summary** of the document  
+   - 🔹 **Key Points** extracted from the content  
+   - 🔹 **Potential Issues** like vague or missing clauses  
+   - 🔹 **Definitions** found in the document  
+
+3. **Track Results with MLflow**  
+   Check the MLflow UI to view experiment logs, including:
+   - Parameters
+   - Metrics
+   - Summarized text and extracted data
+
+---
+
+##  Contributing
+
+Contributions are welcome! To contribute:
+
+1. **Fork** the repository  
+2. **Create a feature branch:**
+
+```bash
+git checkout -b feature/your-feature
+```
+
+3. **Commit your changes:**
+
+```bash
+git commit -am 'Add some feature'
+```
+
+4. **Push to your branch:**
+
+```bash
+git push origin feature/your-feature
+```
+
+5. **Open a Pull Request**  
+
+---
+
+##  License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
